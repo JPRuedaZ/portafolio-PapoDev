@@ -2,14 +2,17 @@
 import Cloudinary from "./icons/Cloudinary.astro"
 import Css from "./icons/Css.astro"
 import Docker from "./icons/Docker.astro"
+import ExpressJs from "./icons/ExpressJs.astro"
 import Html from "./icons/Html.astro"
 import JavaScript from "./icons/JavaScript.astro"
 import Jwt from "./icons/Jwt.astro"
 import MongoDB from "./icons/MongoDB.astro"
 import NestJs from "./icons/NestJs.astro"
+import NextJs from "./icons/NextJs.astro"
 import NodeJs from "./icons/NodeJs.astro"
 import PostgreSQL from "./icons/PostgreSQL.astro"
 import ReactJs from "./icons/ReactJs.astro"
+import Redux from "./icons/Redux.astro"
 import Swagger from "./icons/Swagger.astro"
 import TypeOrm from "./icons/TypeOrm.astro"
 import TypeScript from "./icons/TypeScript.astro"
@@ -21,10 +24,20 @@ const TAGS = {
         class: "bg-red-500",
         icon: NestJs,
     },
+    NEXT: {
+        name: "NextJS",
+        class: "bg-red-500",
+        icon: NextJs,
+    },
     REACT: {
         name: "ReactJS",
         class: "bg-blue-500",
         icon: ReactJs,
+    },
+    REDUX: {
+        name: "Redux",
+        class: "bg-blue-500",
+        icon: Redux,
     },
     JAVASCRIPT: {
         name: "JavaScript",
@@ -36,6 +49,11 @@ const TAGS = {
         class: "bg-blue-500",
         icon: TypeScript,
         
+    },
+    EXPRESSJS: {
+        name: "ExpressJS",
+        class: "bg-blue-500",
+        icon: ExpressJs,
     },
     HTML: {
         name: "HTML",
@@ -96,37 +114,38 @@ const TAGS = {
 }
 const PROJECTS = [
     {
-        title: "Papodev",
+        title: "SIH - Secure Ingress Home",
         description: "Desarrollo de una landing page de papodev. Creado con Astro.",
-        link: "https://papodev.vercel.app/",
-        github: "https://github.com/JPRuedaZ/papodev",
+        link: "https://secureingresshome.vercel.app/",
+        github: "https://github.com/JPRuedaZ/SIH-BackEnd-API-Rest",
         image: "/assets/papodev.png",
-        tags: [TAGS.REACT, TAGS.NEST],
+        tags: [TAGS.TYPESCRIPT,TAGS.REACT,TAGS.NEXT, TAGS.NEST,TAGS.POSTGRESQL,TAGS.TYPEORM,TAGS.JWT,TAGS.CLOUDINARY,TAGS.SWAGGER,TAGS.DOCKER,TAGS.VERCEL,
+        ],
     },
     {
-        title: "Papodev",
-        description: "Desarrollo de una landing page de papodev. Creado con Astro.",
+        title: "Gales Store",
+        description: "Este trabajo fue algo muy interesante por que en el ultimo modulo academico , nos dividimos con mi compa David , el para especializacion del front y yo al back. Luego cada quien termino su especializacion en Abril y terminando Henry decidimos en Junio empalmar los trabajos, su front con mi back entonces nos tomo unos dias organizar todo para que todo cuadrara y quedara una buena pagina del ecommerce que decidimos llamarlo Gales Store.",
         link: "https://papodev.vercel.app/",
-        github: "https://github.com/JPRuedaZ/papodev",
+        github: "https://github.com/JPRuedaZ/Backend-Ecommerce",
         image: "/assets/papodev.png",
-        tags: [TAGS.REACT, TAGS.NEST],
+        tags: [TAGS.TYPESCRIPT,TAGS.REACT, TAGS.NEXT, TAGS.NEST,TAGS.POSTGRESQL,TAGS.TYPEORM,TAGS.CLOUDINARY,TAGS.JWT,TAGS.SWAGGER,TAGS.DOCKER,TAGS.VERCEL],
     },
     {
-        title: "Papodev",
-        description: "Desarrollo de una landing page de papodev. Creado con Astro.",
-        link: "https://papodev.vercel.app/",
-        github: "https://github.com/JPRuedaZ/papodev",
+        title: "Medical Services ",
+        description: "Este es una prueba beta que esta en desarrollo, se trata de un gestor de turnos para solicitar alguna cita de un servicio y que el usuario pueda tener la informacion de su cita agendada y si se le presenta alguna situacion pueda cancelarlo.",
+        link: "https://gestor-de-turnos.vercel.app/",
+        github: "https://github.com/JPRuedaZ/gestor-de-turnos",
         image: "/assets/papodev.png",
-        tags: [TAGS.REACT, TAGS.NEST],
+        tags: [TAGS.JAVASCRIPT,TAGS.TYPESCRIPT,TAGS.REACT,TAGS.REDUX,TAGS.NODEJS, TAGS.EXPRESSJS, TAGS.POSTGRESQL, TAGS.TYPEORM, TAGS.VERCEL],
     },
     {
-        title: "Papodev",
-        description: "Desarrollo de una landing page de papodev. Creado con Astro.",
-        link: "https://papodev.vercel.app/",
-        github: "https://github.com/JPRuedaZ/papodev",
+        title: "PapoMovie",
+        description: "Este fue mi primer proyecto fullstack con Js en el entorno NodeJs, se trata de una pagina de peliculas que empezo haciendo el llamado a una API de peliculas y luego ya esas peliculas se almacenaron en una base de datos entonces ya se conecto un backend con el llamado del front para la creacion de peliculas por medio de un formulario y tiene un filtro combinado en una de las pages.",
+        link: "https://papomovie-pagina.vercel.app/index.html",
+        github: "https://github.com/JPRuedaZ/papomovie-pagina",
         image: "/assets/papodev.png",
-        tags: [TAGS.REACT, TAGS.NEST],
-    }
+        tags: [TAGS.JAVASCRIPT,TAGS.NODEJS,TAGS.EXPRESSJS,TAGS.MONGODB, TAGS.VERCEL],
+    },
 ]
 ---
 
