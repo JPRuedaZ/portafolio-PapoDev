@@ -1,0 +1,152 @@
+---
+import Cloudinary from "./icons/Cloudinary.astro"
+import Css from "./icons/Css.astro"
+import Docker from "./icons/Docker.astro"
+import Html from "./icons/Html.astro"
+import JavaScript from "./icons/JavaScript.astro"
+import Jwt from "./icons/Jwt.astro"
+import MongoDB from "./icons/MongoDB.astro"
+import NestJs from "./icons/NestJs.astro"
+import NodeJs from "./icons/NodeJs.astro"
+import PostgreSQL from "./icons/PostgreSQL.astro"
+import ReactJs from "./icons/ReactJs.astro"
+import Swagger from "./icons/Swagger.astro"
+import TypeOrm from "./icons/TypeOrm.astro"
+import TypeScript from "./icons/TypeScript.astro"
+import Vercel from "./icons/Vercel.astro"
+
+const TAGS = {
+    NEST: {
+        name: "NestJS",
+        class: "bg-red-500",
+        icon: NestJs,
+    },
+    REACT: {
+        name: "ReactJS",
+        class: "bg-blue-500",
+        icon: ReactJs,
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-yellow-500",
+        icon: JavaScript,
+    },
+    TYPESCRIPT: {
+        name: "TypeScript",
+        class: "bg-blue-500",
+        icon: TypeScript,
+        
+    },
+    HTML: {
+        name: "HTML",
+        class: "bg-red-500",
+        icon: Html,
+    },
+
+    CSS: {
+        name: "CSS",
+        class: "bg-blue-500",
+        icon: Css,
+    },
+    POSTGRESQL: {
+        name: "PostgreSQL",
+        class: "bg-yellow-500",
+        icon: PostgreSQL,   
+    },
+    MONGODB: {
+        name: "MongoDB",
+        class: "bg-green-500",
+        icon: MongoDB,
+    },
+    NODEJS: {
+        name: "NodeJS",
+        class: "bg-green-500",
+        icon: NodeJs,
+    },
+    SWAGGER: {
+        name: "Swagger",
+        class: "bg-gray-500",
+        icon: Swagger,
+    },
+    JWT : {
+        name: "JWT",
+        class: "bg-gray-500",
+        icon: Jwt,
+    },
+    DOCKER: {
+        name: "Docker",
+        class: "bg-gray-500",
+        icon: Docker,
+    },
+    CLOUDINARY: {
+        name: "Cloudinary",
+        class: "bg-gray-500",
+        icon: Cloudinary,
+    },
+    TYPEORM : {
+        name: "TypeORM",
+        class: "bg-gray-500",
+        icon: TypeOrm,
+    },
+    VERCEL : {
+        name: "Vercel",
+        class: "bg-gray-500",
+        icon: Vercel,
+    }
+}
+const PROJECTS = [
+    {
+        title: "Papodev",
+        description: "Desarrollo de una landing page de papodev. Creado con Astro.",
+        link: "https://papodev.vercel.app/",
+        github: "https://github.com/JPRuedaZ/papodev",
+        image: "/assets/papodev.png",
+        tags: [TAGS.REACT, TAGS.NEST],
+    },
+    {
+        title: "Papodev",
+        description: "Desarrollo de una landing page de papodev. Creado con Astro.",
+        link: "https://papodev.vercel.app/",
+        github: "https://github.com/JPRuedaZ/papodev",
+        image: "/assets/papodev.png",
+        tags: [TAGS.REACT, TAGS.NEST],
+    },
+    {
+        title: "Papodev",
+        description: "Desarrollo de una landing page de papodev. Creado con Astro.",
+        link: "https://papodev.vercel.app/",
+        github: "https://github.com/JPRuedaZ/papodev",
+        image: "/assets/papodev.png",
+        tags: [TAGS.REACT, TAGS.NEST],
+    },
+    {
+        title: "Papodev",
+        description: "Desarrollo de una landing page de papodev. Creado con Astro.",
+        link: "https://papodev.vercel.app/",
+        github: "https://github.com/JPRuedaZ/papodev",
+        image: "/assets/papodev.png",
+        tags: [TAGS.REACT, TAGS.NEST],
+    }
+]
+---
+
+{
+    PROJECTS.map(({title, description, link, github, image, tags}) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row mb-2">
+                {
+                    tags.map((tag) => (
+                        <li>
+                            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`} >
+                            <tag.icon class="size-4" />{tag.name}
+                            </span>
+                        </li>
+                    ))
+                }
+            </ul>
+            <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`} />
+        </article>
+    ))
+}
