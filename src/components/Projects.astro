@@ -113,21 +113,30 @@ const TAGS = {
     }
 }
 const PROJECTS = [
+{
+        title: "Delicias Gales SAS",
+        description: "Desarrollo de una aplicacion para una distribuidora de diferente tipos de productos con el fin de mejorar la eficiencia del proceso de venta y optimizar el tiempo de entrega.",
+        link: "https://secureingresshome.vercel.app/",
+        github: "https://github.com/jourdanmauricio/delicias-gales-back",
+        image: "/public/projects/enconstruccion.png",
+        tags: [TAGS.TYPESCRIPT,TAGS.REACT,TAGS.NEXT, TAGS.NEST,TAGS.POSTGRESQL,TAGS.TYPEORM,TAGS.JWT,TAGS.CLOUDINARY,TAGS.SWAGGER
+        ],
+    },
     {
         title: "SIH - Secure Ingress Home",
-        description: "Desarrollo de una landing page de papodev. Creado con Astro.",
+        description: "Desarrollo de una aplicación web para los conjuntos residenciales, con el fin de fortalecer la seguridad en las viviendas y mejorar la experiencia de los propietarios junto con los visitantes que accedan al predio.",
         link: "https://secureingresshome.vercel.app/",
         github: "https://github.com/JPRuedaZ/SIH-BackEnd-API-Rest",
-        image: "/assets/papodev.png",
+        image: "/public/projects/sih2.png",
         tags: [TAGS.TYPESCRIPT,TAGS.REACT,TAGS.NEXT, TAGS.NEST,TAGS.POSTGRESQL,TAGS.TYPEORM,TAGS.JWT,TAGS.CLOUDINARY,TAGS.SWAGGER,TAGS.DOCKER,TAGS.VERCEL,
         ],
     },
     {
-        title: "Gales Store",
-        description: "Este trabajo fue algo muy interesante por que en el ultimo modulo academico , nos dividimos con mi compa David , el para especializacion del front y yo al back. Luego cada quien termino su especializacion en Abril y terminando Henry decidimos en Junio empalmar los trabajos, su front con mi back entonces nos tomo unos dias organizar todo para que todo cuadrara y quedara una buena pagina del ecommerce que decidimos llamarlo Gales Store.",
+        title: "Ramiro Tech",
+        description: "Este trabajo fue algo muy interesante por que en el ultimo modulo academico , nos dividimos con mi compa David , el para especializacion del front y yo al back. Luego cada quien termino su especializacion en Abril y terminando Henry decidimos en Junio empalmar los trabajos, su front con mi back entonces nos tomo unos dias organizar todo para que todo cuadrara y quedara una buena pagina del ecommerce que decidimos llamarlo Ramiro Tech.",
         link: "https://papodev.vercel.app/",
         github: "https://github.com/JPRuedaZ/Backend-Ecommerce",
-        image: "/assets/papodev.png",
+        image: "/public/projects/ramirotech2.png",
         tags: [TAGS.TYPESCRIPT,TAGS.REACT, TAGS.NEXT, TAGS.NEST,TAGS.POSTGRESQL,TAGS.TYPEORM,TAGS.CLOUDINARY,TAGS.JWT,TAGS.SWAGGER,TAGS.DOCKER,TAGS.VERCEL],
     },
     {
@@ -135,37 +144,53 @@ const PROJECTS = [
         description: "Este es una prueba beta que esta en desarrollo, se trata de un gestor de turnos para solicitar alguna cita de un servicio y que el usuario pueda tener la informacion de su cita agendada y si se le presenta alguna situacion pueda cancelarlo.",
         link: "https://gestor-de-turnos.vercel.app/",
         github: "https://github.com/JPRuedaZ/gestor-de-turnos",
-        image: "/assets/papodev.png",
-        tags: [TAGS.JAVASCRIPT,TAGS.TYPESCRIPT,TAGS.REACT,TAGS.REDUX,TAGS.NODEJS, TAGS.EXPRESSJS, TAGS.POSTGRESQL, TAGS.TYPEORM, TAGS.VERCEL],
+        image: "/public/projects/medicalservices2.png",
+        tags: [TAGS.CSS,TAGS.JAVASCRIPT,TAGS.TYPESCRIPT,TAGS.REACT,TAGS.REDUX,TAGS.NODEJS, TAGS.EXPRESSJS, TAGS.POSTGRESQL, TAGS.TYPEORM, TAGS.VERCEL],
     },
     {
         title: "PapoMovie",
         description: "Este fue mi primer proyecto fullstack con Js en el entorno NodeJs, se trata de una pagina de peliculas que empezo haciendo el llamado a una API de peliculas y luego ya esas peliculas se almacenaron en una base de datos entonces ya se conecto un backend con el llamado del front para la creacion de peliculas por medio de un formulario y tiene un filtro combinado en una de las pages.",
         link: "https://papomovie-pagina.vercel.app/index.html",
         github: "https://github.com/JPRuedaZ/papomovie-pagina",
-        image: "/assets/papodev.png",
-        tags: [TAGS.JAVASCRIPT,TAGS.NODEJS,TAGS.EXPRESSJS,TAGS.MONGODB, TAGS.VERCEL],
+        image: "/public/projects/papomovie2.png",
+        tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT,TAGS.NODEJS,TAGS.EXPRESSJS,TAGS.MONGODB, TAGS.VERCEL],
     },
 ]
 ---
-
+<section class="grid grid-cols-auto-fill-300 gap-20 px-5">
 {
     PROJECTS.map(({title, description, link, github, image, tags}) => (
-        <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-2 flex-row mb-2">
-                {
-                    tags.map((tag) => (
-                        <li>
-                            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`} >
-                            <tag.icon class="size-4" />{tag.name}
-                            </span>
-                        </li>
-                    ))
-                }
-            </ul>
-            <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`} />
-        </article>
+    <article class="max-w-1/2 flex flex-col">
+        <h3 class="text-xl font-semibold text-yellow-200 mb-4">{title}</h3>
+
+        <a
+          class="relative group rounded flex justify-center w-full overflow-hidden"
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="w-full h-auto rounded shadow-2xl shadow-white/10 group-hover:scale-110 transition duration-500 object-cover"
+            src={image}
+            alt={`Captura de pantalla del proyecto ${image}`}
+          />
+          <div class="absolute bg-black w-full h-full opacity-0 transition-opacity duration-500 group-hover:opacity-10" />
+        </a>
+        <ul class="flex flex-wrap gap-2 flex-row my-4">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-0 px-2`}
+              >
+                <tag.icon class="size-5" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        <p class="text-base mb-4 text-pretty flex-grow">{description}</p>
+      </article>
     ))
 }
+</section>
