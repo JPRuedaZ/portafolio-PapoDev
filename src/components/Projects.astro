@@ -14,6 +14,7 @@ import PostgreSQL from "./icons/PostgreSQL.astro"
 import ReactJs from "./icons/ReactJs.astro"
 import Redux from "./icons/Redux.astro"
 import Swagger from "./icons/Swagger.astro"
+import Tailwind from "./icons/Tailwind.astro"
 import TypeOrm from "./icons/TypeOrm.astro"
 import TypeScript from "./icons/TypeScript.astro"
 import Vercel from "./icons/Vercel.astro"
@@ -21,12 +22,12 @@ import Vercel from "./icons/Vercel.astro"
 const TAGS = {
     NEST: {
         name: "NestJS",
-        class: "bg-red-500",
+        class: "bg-[#0c131c] text-white",
         icon: NestJs,
     },
     NEXT: {
         name: "NextJS",
-        class: "bg-red-500",
+        class: "bg-[#fffefe] text-black",
         icon: NextJs,
     },
     REACT: {
@@ -36,7 +37,7 @@ const TAGS = {
     },
     REDUX: {
         name: "Redux",
-        class: "bg-blue-500",
+        class: "bg-[#fffefe] text-black",
         icon: Redux,
     },
     JAVASCRIPT: {
@@ -50,9 +51,14 @@ const TAGS = {
         icon: TypeScript,
         
     },
+    TAILWIND: {
+    name: 'Tailwind CSS',
+    class: 'bg-[#003159] text-white',
+    icon: Tailwind,
+  },
     EXPRESSJS: {
         name: "ExpressJS",
-        class: "bg-blue-500",
+        class: "bg-[#fffefe] text-black",
         icon: ExpressJs,
     },
     HTML: {
@@ -68,7 +74,7 @@ const TAGS = {
     },
     POSTGRESQL: {
         name: "PostgreSQL",
-        class: "bg-yellow-500",
+        class: "bg-[#12223d] text-white",
         icon: PostgreSQL,   
     },
     MONGODB: {
@@ -78,7 +84,7 @@ const TAGS = {
     },
     NODEJS: {
         name: "NodeJS",
-        class: "bg-green-500",
+        class: "bg-[#0c131c] text-white",
         icon: NodeJs,
     },
     SWAGGER: {
@@ -93,17 +99,17 @@ const TAGS = {
     },
     DOCKER: {
         name: "Docker",
-        class: "bg-gray-500",
+        class: "bg-[#fffefe] text-black",
         icon: Docker,
     },
     CLOUDINARY: {
         name: "Cloudinary",
-        class: "bg-gray-500",
+        class: "bg-[#fffefe] text-black",
         icon: Cloudinary,
     },
     TYPEORM : {
         name: "TypeORM",
-        class: "bg-gray-500",
+        class: "bg-[#fffefe] text-black",
         icon: TypeOrm,
     },
     VERCEL : {
@@ -119,7 +125,7 @@ const PROJECTS = [
         link: "https://secureingresshome.vercel.app/",
         github: "https://github.com/jourdanmauricio/delicias-gales-back",
         image: "/public/projects/enconstruccion.png",
-        tags: [TAGS.TYPESCRIPT,TAGS.REACT,TAGS.NEXT, TAGS.NEST,TAGS.POSTGRESQL,TAGS.TYPEORM,TAGS.JWT,TAGS.CLOUDINARY,TAGS.SWAGGER
+        tags: [TAGS.TYPESCRIPT,TAGS.NEXT, TAGS.NEST,TAGS.TAILWIND,TAGS.POSTGRESQL,TAGS.TYPEORM,TAGS.JWT,TAGS.CLOUDINARY,TAGS.SWAGGER
         ],
     },
     {
@@ -128,7 +134,7 @@ const PROJECTS = [
         link: "https://secureingresshome.vercel.app/",
         github: "https://github.com/JPRuedaZ/SIH-BackEnd-API-Rest",
         image: "/public/projects/sih2.png",
-        tags: [TAGS.TYPESCRIPT,TAGS.REACT,TAGS.NEXT, TAGS.NEST,TAGS.POSTGRESQL,TAGS.TYPEORM,TAGS.JWT,TAGS.CLOUDINARY,TAGS.SWAGGER,TAGS.DOCKER,TAGS.VERCEL,
+        tags: [TAGS.TYPESCRIPT,TAGS.NEXT, TAGS.NEST,TAGS.TAILWIND,TAGS.POSTGRESQL,TAGS.TYPEORM,TAGS.JWT,TAGS.CLOUDINARY,TAGS.SWAGGER,TAGS.DOCKER,TAGS.VERCEL,
         ],
     },
     {
@@ -137,7 +143,7 @@ const PROJECTS = [
         link: "https://papodev.vercel.app/",
         github: "https://github.com/JPRuedaZ/Backend-Ecommerce",
         image: "/public/projects/ramirotech2.png",
-        tags: [TAGS.TYPESCRIPT,TAGS.REACT, TAGS.NEXT, TAGS.NEST,TAGS.POSTGRESQL,TAGS.TYPEORM,TAGS.CLOUDINARY,TAGS.JWT,TAGS.SWAGGER,TAGS.DOCKER,TAGS.VERCEL],
+        tags: [TAGS.TYPESCRIPT,TAGS.NEXT, TAGS.NEST,TAGS.TAILWIND,TAGS.POSTGRESQL,TAGS.TYPEORM,TAGS.CLOUDINARY,TAGS.JWT,TAGS.SWAGGER,TAGS.DOCKER,TAGS.VERCEL],
     },
     {
         title: "Medical Services ",
@@ -161,7 +167,7 @@ const PROJECTS = [
 {
     PROJECTS.map(({title, description, link, github, image, tags}) => (
     <article class="max-w-1/2 flex flex-col">
-        <h3 class="text-xl font-semibold text-yellow-200 mb-4">{title}</h3>
+        <a href={github} target="_blank" rel="noopener noreferrer" class="no-underline"><h3 class="text-xl font-semibold text-yellow-200 mb-4">{title}</h3></a>
 
         <a
           class="relative group rounded flex justify-center w-full overflow-hidden"
