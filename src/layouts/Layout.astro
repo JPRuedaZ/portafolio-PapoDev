@@ -60,6 +60,75 @@ const { description } = Astro.props;
 		background-size: 20px 20px;
 		z-index: -1;
 	}
+
+	.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 calc(33.333% - 1rem); /* Ajusta el ancho de cada tarjeta */
+  max-width: 300px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card-img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.card-text {
+  color: gray;
+  font-size: 1rem;
+}
+
+/* Dark mode styles */
+.dark .card {
+  background-color: #2d3748;
+  border-color: #4a5568;
+}
+
+.dark .card-title {
+  color: white;
+}
+
+.dark .card-text {
+  color: #a0aec0;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .card {
+    flex: 1 1 calc(50% - 1rem); /* Dos tarjetas por fila en pantallas medianas */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%; /* Una tarjeta por fila en pantallas pequeñas */
+    max-width: 100%;
+  }
+}
 	.animated {
   display: inline-block;
   animation: move 18s ease-in-out infinite;
@@ -76,6 +145,12 @@ const { description } = Astro.props;
   }
 }
 
+	@media (max-width: 600px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
 	@media (prefers-reduce-motion: reduce) {
 		html {
 			scroll-behavior: auto;
@@ -85,21 +160,14 @@ const { description } = Astro.props;
 	@media (max-width: 768px) {
   .animated {
     animation-duration: 12s; /* Reducir la duración en pantallas más pequeñas */
+	animation-name: move-small; /* Posiblemente una animación más simple o estática */
   }
 }
-
-@media (max-width: 450px) {
-  .animated {
-    animation-duration: 10s; /* Ajuste adicional para pantallas aún más pequeñas */
-    animation-name: move-small; /* Posiblemente una animación más simple o estática */
-  }
-
-  
   @keyframes move-small {
     from, to {
       transform: translateX(0);
     }
   }
-}
+
 	
 </style>
